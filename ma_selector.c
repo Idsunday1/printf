@@ -1,25 +1,36 @@
 #include "main.h"
+
 /**
- * ma_selector - select the appropriate printing func. based on format specifier.
- * @str: The format specifier character (c, s and %)
+ * ma_selector - select the appropriate printing func. based on format specifier
+ *
+ * @strn: The format specifier character (c, s and %)
  * Return: A func. pointer to the selected printing func. or NULL if invalid
  */
-int (*ma_selector(char str))(va_list args_ls)
+int (*ma_selector(char strn))(va_list args_ls)
 {
-	if (str == 'c')
+	if (strn == 's')
 	{
-		return (&_print_char);
+		return (&string_print);
 	}
-	else if (str == 's')
+	else if (strn == 'c')
 	{
-		return (&_print_string);
+		return (&chars_print);
 	}
-	else if (str == '%')
+	else if (strn == '%')
 	{
-		return (&_print_percent);
+		return (&percent_print);
 	}
-	else if (str == 'd')
+	else if (strn == 'd')
 	{
-		return (&_print_d);
+		return (&d_print);
 	}
+	else if (strn == 'b')
+        {
+                return (&b_print);
+        }
+	else if (strn == 'i')
+        {
+                return (&i_print);
+        }
+	return (0);
 }
