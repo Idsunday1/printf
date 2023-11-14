@@ -9,5 +9,7 @@
 #include <string.h>
 
 int _putchar(char c);
+int _printf(const char *format, ...)
+int (*ma_selector(char str))(va_list args_ls);
 
 #endif /* MAIN_H */
