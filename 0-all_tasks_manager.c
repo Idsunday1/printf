@@ -51,3 +51,35 @@ int percent_print(va_list arg_ls)
         (void)args_ls;
         return (_putchar('%'));
 }
+
+/**
+ * d_print - a function that prints an integer
+ *
+ * @args_ls: va_list containing the actual integer to print
+ *
+ * Return: no. of chars printed
+ */
+int d_print(va_list args_ls)
+{
+        int record;
+        int intit = va_arg(args_ls, int);
+
+        record = int_printer(intit, 0);
+        return (record);
+}
+
+/**
+ * i_print - a function that prints an integer
+ *
+ * @args_ls: va_list containing the actual integer to print
+ *
+ * Return: no. of chars printed
+ */
+int i_print(va_list args_ls)
+{
+        int record;
+        int intit = va_arg(args_ls, int);
+
+        count = int_printer(intit, 0);
+        return (record);
+}
