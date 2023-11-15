@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * ma_selector - select the appropriate printing func. based on format specifier
+ * ma_selector - select the appropriate printing func. based on frmat specifier
  *
  * @strn: The format specifier character (c, s and %)
  * Return: A func. pointer to the selected printing func. or NULL if invalid
@@ -25,12 +25,12 @@ int (*ma_selector(char strn))(va_list args_ls)
 		return (&d_print);
 	}
 	else if (strn == 'b')
-        {
-                return (&b_print);
-        }
+	{
+		return (&b_print);
+	}
 	else if (strn == 'i')
-        {
-                return (&i_print);
-        }
+	{
+		return (&i_print);
+	}
 	return (0);
 }

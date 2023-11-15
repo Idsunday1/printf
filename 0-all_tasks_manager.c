@@ -9,17 +9,17 @@
  */
 int string_print(va_list args_ls)
 {
-        int record = 0;
-        char *strn_pt = va_arg(arg_ls, char *);
+	int record = 0;
+	char *strn_pt = va_arg(args_ls, char *);
 
-        if (strn_pt == NULL)
-        {
-                strn_pt = "(null)";
-        }
-        while (*strn_pt)
-        {
-                record += _putchar(*strn_pt);
-                strn_pt++;
+	if (strn_pt == NULL)
+	{
+		strn_pt = "(null)";
+	}
+	while (*strn_pt)
+	{
+		record += _putchar(*strn_pt);
+		strn_pt++;
 	}
 	return (record);
 }
@@ -30,26 +30,26 @@ int string_print(va_list args_ls)
  * @args_ls: va_list containing the actual character to print
  * Return: no. of chars printed
  */
-int chars_print(va_list arg_ls)
+int chars_print(va_list args_ls)
 {
-        int record;
-        char charsit = va_arg(args_ls, int);
+	int record;
+	char charsit = va_arg(args_ls, int);
 
-        record = _putchar(charsit);
-        return (record);
+	record = _putchar(charsit);
+	return (record);
 }
 
- /**
+/**
  * percent_print - a function that prints a percent sign '%'
  *
  * @args_ls: va_list containing the % to print
  *
  * Return: no. of chars printed
  */
-int percent_print(va_list arg_ls)
+int percent_print(va_list args_ls)
 {
-        (void)args_ls;
-        return (_putchar('%'));
+	(void)args_ls;
+	return (_putchar('%'));
 }
 
 /**
@@ -61,11 +61,11 @@ int percent_print(va_list arg_ls)
  */
 int d_print(va_list args_ls)
 {
-        int record;
-        int intit = va_arg(args_ls, int);
+	int record;
+	int intit = va_arg(args_ls, int);
 
-        record = int_printer(intit, 0);
-        return (record);
+	record = int_printer(intit, 0);
+	return (record);
 }
 
 /**
@@ -77,9 +77,9 @@ int d_print(va_list args_ls)
  */
 int i_print(va_list args_ls)
 {
-        int record;
-        int intit = va_arg(args_ls, int);
+	int record;
+	int intit = va_arg(args_ls, int);
 
-        count = int_printer(intit, 0);
-        return (record);
+	record = int_printer(intit, 0);
+	return (record);
 }
