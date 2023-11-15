@@ -1,4 +1,3 @@
-
 #ifndef MAIN_H
 #define MAIN_H
 
@@ -9,8 +8,8 @@
 #include <string.h>
 
 int string_print(va_list args_ls);
-int chars_print(va_list arg_ls);
-int percent_print(va_list arg_ls);
+int chars_print(va_list args_ls);
+int percent_print(va_list args_ls);
 int d_print(va_list args_ls);
 int i_print(va_list args_ls);
 int b_print(va_list args_ls);

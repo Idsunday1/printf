@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * _printf - a function that prints formatted output based on a format string.
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			{
 				char_prt += ma_selector(format[a])(args_ls);
 			}
-			else if
+			else
 			{
 				char_prt += _putchar('%');
 				char_prt += _putchar(format[a]);

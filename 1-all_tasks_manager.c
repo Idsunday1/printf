@@ -12,9 +12,9 @@ int b_print(va_list args_ls)
 	int y = 0;
 	int x;
 
-	for (i = sizeof(intg) * 8 - 1; i >= 0; i--)
+	for (x = sizeof(intg) * 8 - 1; x >= 0; x--)
 	{
-		int intit = (intg >> i) & 1;
+		int intit = (intg >> x) & 1;
 
 		if (intit == 1 || y)
 		{
